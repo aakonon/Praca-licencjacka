@@ -1,3 +1,4 @@
+from pathlib import Path
 import re
 import random
 import requests
@@ -77,4 +78,5 @@ for p in random.sample(range(1, ostatnia_strona + 1), k=ostatnia_strona):
 
             row += 1
 
+Path(typ).mkdir(parents=True, exist_ok=True)
 book.save(f'{typ}/{miasto}.xlsx')
